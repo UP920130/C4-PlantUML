@@ -2,7 +2,7 @@
 !if %variable_exists("RELATIVE_INCLUDE")
   !include %get_variable_value("RELATIVE_INCLUDE")/C4_Container.puml
 !else
-  !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+  !includeurl !includeurl https://raw.githubusercontent.com/UP920130/C4-PlantUML/master/C4_Container.puml
 !endif
 
 ' Colors
@@ -83,7 +83,7 @@ SetDefaultLegendEntries("person\nsystem\ncontainer\nexternal_person\nexternal_sy
 !if (%strpos($descr, "\n") >= 0)
 !else
   !while (%strlen($descr)>$width)
-    !$brPos = $width 
+    !$brPos = $width
     !while ($brPos>0 && %substr($descr, $brPos, 1)!= ' ')
       !$brPos = $brPos - 1
     !endwhile
@@ -120,7 +120,7 @@ SetDefaultLegendEntries("person\nsystem\ncontainer\nexternal_person\nexternal_sy
   !if ($descr != "")
     !$nodeText = $nodeText + '\n\n' + $breakDescr($descr, $NODE_DESCR_MAX_CHAR_WIDTH)
   !endif
-  !return $nodeText 
+  !return $nodeText
 !endfunction
 
 !function $getNode_L($label, $type, $descr, $sprite)
@@ -135,7 +135,7 @@ SetDefaultLegendEntries("person\nsystem\ncontainer\nexternal_person\nexternal_sy
   !if ($descr != "")
     !$nodeText = $nodeText + '\l\l' + $breakDescr($descr, $NODE_DESCR_MAX_CHAR_WIDTH)
   !endif
-  !return $nodeText 
+  !return $nodeText
 !endfunction
 
 !function $getNode_R($label, $type, $descr, $sprite)
@@ -150,7 +150,7 @@ SetDefaultLegendEntries("person\nsystem\ncontainer\nexternal_person\nexternal_sy
   !if ($descr != "")
     !$nodeText = $nodeText + '\r\r' + $breakDescr($descr, $NODE_DESCR_MAX_CHAR_WIDTH)
   !endif
-  !return $nodeText 
+  !return $nodeText
 !endfunction
 
 !unquoted procedure Deployment_Node($alias, $label, $type="", $descr="", $sprite="", $tags="")
