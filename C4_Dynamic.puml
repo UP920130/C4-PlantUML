@@ -2,7 +2,7 @@
 !if %variable_exists("RELATIVE_INCLUDE")
   !include %get_variable_value("RELATIVE_INCLUDE")/C4_Component.puml
 !else
-  !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+  !includeurl https://raw.githubusercontent.com/UP920130/C4-PlantUML/master/C4_Component.puml
 !endif
 
 ' Scope: Interactions in an enterprise, software system or container.
@@ -217,5 +217,3 @@ Rel_($e_index, $from, $to, $label, "-RIGHT->>")
 !unquoted procedure RelIndex_Right($e_index, $from, $to, $label, $techn)
 Rel_($e_index, $from, $to, $label, $techn, "-RIGHT->>")
 !endprocedure
-
-
